@@ -13,6 +13,10 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    # Create tables
+    # Game.__table__.create(bind=engine, checkfirst=True)
+    # Review.__table__.create(bind=engine, checkfirst=True)
+    
     session.query(Game).delete()
     session.query(Review).delete()
 
